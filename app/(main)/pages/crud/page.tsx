@@ -216,7 +216,7 @@ const Crud = () => {
     const codeBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Code</span>
+                <span className="p-column-title">Código</span>
                 {rowData.code}
             </>
         );
@@ -225,7 +225,7 @@ const Crud = () => {
     const nameBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Name</span>
+                <span className="p-column-title">Nome</span>
                 {rowData.name}
             </>
         );
@@ -234,7 +234,7 @@ const Crud = () => {
     const imageBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Image</span>
+                <span className="p-column-title">Imagem</span>
                 <img src={`/demo/images/product/${rowData.image}`} alt={rowData.image} className="shadow-2" width="100" />
             </>
         );
@@ -243,7 +243,7 @@ const Crud = () => {
     const priceBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Price</span>
+                <span className="p-column-title">Preço</span>
                 {formatCurrency(rowData.price as number)}
             </>
         );
@@ -252,7 +252,7 @@ const Crud = () => {
     const categoryBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Category</span>
+                <span className="p-column-title">Categoria</span>
                 {rowData.category}
             </>
         );
@@ -261,7 +261,7 @@ const Crud = () => {
     const ratingBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Reviews</span>
+                <span className="p-column-title">Reviu</span>
                 <Rating value={rowData.rating} readOnly cancel={false} />
             </>
         );
@@ -339,12 +339,12 @@ const Crud = () => {
                         responsiveLayout="scroll"
                     >
                         <Column selectionMode="multiple" headerStyle={{ width: '4rem' }}></Column>
-                        <Column field="code" header="Code" sortable body={codeBodyTemplate} headerStyle={{ minWidth: '15rem' }}></Column>
-                        <Column field="name" header="Name" sortable body={nameBodyTemplate} headerStyle={{ minWidth: '15rem' }}></Column>
-                        <Column header="Image" body={imageBodyTemplate}></Column>
-                        <Column field="price" header="Price" body={priceBodyTemplate} sortable></Column>
-                        <Column field="category" header="Category" sortable body={categoryBodyTemplate} headerStyle={{ minWidth: '10rem' }}></Column>
-                        <Column field="rating" header="Reviews" body={ratingBodyTemplate} sortable></Column>
+                        <Column field="code" header="Código" sortable body={codeBodyTemplate} headerStyle={{ minWidth: '15rem' }}></Column>
+                        <Column field="name" header="Nome" sortable body={nameBodyTemplate} headerStyle={{ minWidth: '15rem' }}></Column>
+                        <Column header="Imagem" body={imageBodyTemplate}></Column>
+                        <Column field="Preço" header="Preço" body={priceBodyTemplate} sortable></Column>
+                        <Column field="category" header="Categoria" sortable body={categoryBodyTemplate} headerStyle={{ minWidth: '10rem' }}></Column>
+                        <Column field="rating" header="Review" body={ratingBodyTemplate} sortable></Column>
                         <Column field="inventoryStatus" header="Status" body={statusBodyTemplate} sortable headerStyle={{ minWidth: '10rem' }}></Column>
                         <Column body={actionBodyTemplate} headerStyle={{ minWidth: '10rem' }}></Column>
                     </DataTable>
@@ -352,7 +352,7 @@ const Crud = () => {
                     <Dialog visible={productDialog} style={{ width: '450px' }} header="Product Details" modal className="p-fluid" footer={productDialogFooter} onHide={hideDialog}>
                         {product.image && <img src={`/demo/images/product/${product.image}`} alt={product.image} width="150" className="mt-0 mx-auto mb-5 block shadow-2" />}
                         <div className="field">
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Nome</label>
                             <InputText
                                 id="name"
                                 value={product.name}
@@ -366,12 +366,12 @@ const Crud = () => {
                             {submitted && !product.name && <small className="p-invalid">Name is required.</small>}
                         </div>
                         <div className="field">
-                            <label htmlFor="description">Description</label>
+                            <label htmlFor="description">Descrição</label>
                             <InputTextarea id="description" value={product.description} onChange={(e) => onInputChange(e, 'description')} required rows={3} cols={20} />
                         </div>
 
                         <div className="field">
-                            <label className="mb-3">Category</label>
+                            <label className="mb-3">Categoria</label>
                             <div className="formgrid grid">
                                 <div className="field-radiobutton col-6">
                                     <RadioButton inputId="category1" name="category" value="Accessories" onChange={onCategoryChange} checked={product.category === 'Accessories'} />
@@ -394,7 +394,7 @@ const Crud = () => {
 
                         <div className="formgrid grid">
                             <div className="field col">
-                                <label htmlFor="price">Price</label>
+                                <label htmlFor="price">Preço</label>
                                 <InputNumber id="price" value={product.price} onValueChange={(e) => onInputNumberChange(e, 'price')} mode="currency" currency="USD" locale="en-US" />
                             </div>
                             <div className="field col">

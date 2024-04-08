@@ -13,14 +13,14 @@ const AppMenu = () => {
     const model: AppMenuItem[] = [
         {
             label: 'Home',
-            items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+            items: [{ label: 'Navegação', icon: 'pi pi-fw pi-home', to: '/' }]
         },
-        {
+        /*{
             label: 'Componentes',
             items: [
                 { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
                 { label: 'Input', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
-             /*   { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', to: '/uikit/floatlabel' },
+                { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', to: '/uikit/floatlabel' },
                 { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', to: '/uikit/invalidstate' },
                 { label: 'Button', icon: 'pi pi-fw pi-mobile', to: '/uikit/button', class: 'rotated-icon' },
                 { label: 'Table', icon: 'pi pi-fw pi-table', to: '/uikit/table' },
@@ -33,9 +33,9 @@ const AppMenu = () => {
                 { label: 'Message', icon: 'pi pi-fw pi-comment', to: '/uikit/message' },
                 { label: 'File', icon: 'pi pi-fw pi-file', to: '/uikit/file' },
                 { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', to: '/uikit/charts' },
-                { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' }*/
+                { label: 'Misc', icon: 'pi pi-fw pi-circle', to: '/uikit/misc' }
             ]
-        },
+        },*/
        /* {
             label: 'Prime Blocks',
             items: [
@@ -58,9 +58,54 @@ const AppMenu = () => {
             to: '/pages',
             items: [
                 {
-                    label: 'Landing',
-                    icon: 'pi pi-fw pi-globe',
+                    label: 'Centro Educacional',
+                    icon: 'pi pi-fw pi-folder-open',
                     to: '/landing'
+                },
+                {
+                    label: 'Gerências',
+                    icon: 'pi pi-fw pi-list',
+                    to: '/crud'
+                },
+                {
+                    label: 'Projetos',
+                    icon: 'pi pi-fw pi-pencil'
+                },
+                {
+                    label: 'Servidor',
+                    icon: 'pi pi-fw pi-user'
+                },
+                {
+                    label: 'Acompanhamento',
+                    icon: 'pi pi-fw pi-id-card',
+                    to: '/crud'
+                },
+                {
+                    label: 'Relatórios',
+                    icon: 'pi pi-fw pi-chart-bar',
+                    to: '/crud'
+                },
+            
+                {
+                    label: 'Hora Extra',
+                    icon: 'pi pi-fw pi-clock',
+                    items: [
+                        {
+                            label: 'Aguardando Aprovação',
+                            icon: 'pi pi-fw pi-list',
+                            to: '/auth/login'
+                        },
+                        {
+                            label: 'Aprovada',
+                            icon: 'pi pi-fw pi-list',
+                            to: '/auth/error'
+                        },
+                        {
+                            label: 'Encerrada',
+                            icon: 'pi pi-fw pi-list',
+                            to: '/auth/access'
+                        }
+                    ]
                 },
                 {
                     label: 'Auth',
@@ -83,29 +128,15 @@ const AppMenu = () => {
                         }
                     ]
                 },
+
                 {
                     label: 'Crud',
                     icon: 'pi pi-fw pi-pencil',
                     to: '/pages/crud'
-                },
-                {
-                    label: 'Timeline',
-                    icon: 'pi pi-fw pi-calendar',
-                    to: '/pages/timeline'
-                },
-                {
-                    label: 'Not Found',
-                    icon: 'pi pi-fw pi-exclamation-circle',
-                    to: '/pages/notfound'
-                },
-                {
-                    label: 'Empty',
-                    icon: 'pi pi-fw pi-circle-off',
-                    to: '/pages/empty'
                 }
             ]
         },
-        {
+       /* {
             label: 'Hierarchy',
             items: [
                 {
@@ -148,7 +179,7 @@ const AppMenu = () => {
                     ]
                 }
             ]
-        },
+        },*/
        /* {
             label: 'Get Started',
             items: [
@@ -182,7 +213,9 @@ const AppMenu = () => {
                 })}
 
                 <Link href="https://blocks.primereact.org" target="_blank" style={{ cursor: 'pointer' }}>
-                    <img alt="Prime Blocks" className="w-full mt-3" src={`/layout/images/banner-primeblocks${layoutConfig.colorScheme === 'light' ? '' : '-dark'}.png`} />
+                   <img alt="Prime Blocks" className="w-full mt-3" src={`/layout/images/banner-primeblocks${layoutConfig.colorScheme === 'light' ? '' : '-dark'}.png`} />
+                    {/*<img alt="Prime Blocks" className="w-full mt-3" src={`/layout/images/brasao.jpg`} width="10px" height={'250px'} />*/}
+
                 </Link>
             </ul>
         </MenuProvider>
